@@ -20,7 +20,7 @@ class OdomTFBroadcaster:
         # NOTE this works with only one robot with respect to the world frame.
         t = TransformStamped()
         t.header.stamp = rospy.Time.now()
-        t.header.frame_id = "world"
+        t.header.frame_id = "odom"
         t.child_frame_id = "base_footprint"
         t.transform.translation.x = odom_msg.pose.pose.position.x
         t.transform.translation.y = odom_msg.pose.pose.position.y
